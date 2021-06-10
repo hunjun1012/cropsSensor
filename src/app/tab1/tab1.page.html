@@ -1,0 +1,87 @@
+<head>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        <center>농작물 생육 지수 측정 센서</center>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+</head>
+
+<body>
+  <ion-content>
+    <ion-list>
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>
+            <center>농작물 생육 지수 측정 센서</center>
+          </ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-item>
+        <h4 id="time">측정시간 : </h4>
+        <h2 id="clock" style="color:gray;">{{date}}</h2>
+      </ion-item>
+
+      <table align="center" bgcolor="white" width="90%" height="100px">
+        <tr>
+          <th>NDVI(%) </th>
+          <th>{{NDVI}}</th>
+        </tr>
+      </table>
+
+      <table align="center" bgcolor="white" width="90%" height="100px">
+        <tr>
+          <th>WI(%) </th>
+          <th>{{WI}}</th>
+        </tr>
+      </table>
+
+      <center>
+        <div>
+          <ion-button color="dark" id="firstheat" (click)="firstheat()">예열</ion-button>
+          <ion-button color="dark" id="measure" (click)="measure()" [disabled]="isDisabled">측정</ion-button>
+        </div>
+      </center>
+
+      <div>
+        <ion-item>
+          <h2 align="center" style="margin: auto;">기록</h2>
+        </ion-item>
+      </div>
+
+      <table id="table1" align="center" border="4" bgcolor="white" bordercolor="#000000" width="90%">
+        <tr>
+          <th>순번</th>
+          <th>NDVI(%)</th>
+          <th>WI(%)</th>
+          <th>태그</th>
+        </tr>
+        <tbody>
+          <tr *ngFor="let record of records; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{record.NDVI}}</td>
+            <td>{{record.WI}}</td>
+            <td><input type="text"></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <center>
+        <div>
+          <ion-button color="dark" type="record" id="record" (click)="record();" [disabled]="Disabled">기록</ion-button>
+          <ion-button color="dark" type="reset" id="reset" (click)="reset();">초기화</ion-button>
+        </div>
+      </center>
+
+      <!-- <center>
+      <div>
+        <input type="checkbox" id="random" >
+      </div>
+      </center> -->
+
+    </ion-list>
+  </ion-content>
+</body>

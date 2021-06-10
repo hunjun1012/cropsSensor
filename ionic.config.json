@@ -1,0 +1,7 @@
+{
+  "name": "sensor",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,45 @@
+table {
+    table-layout: fixed;
+    text-align: center;
+    height: 100px;
+}
+
+#table1 {
+    table-layout: fixed;
+    text-align: center;
+    height: 100px;
+}
+
+#firstheat, #measure, #record, #reset{
+    border:1x solid #111111;    
+    background-Color:#ffe6f2;   
+    font:12px 굴림;      
+    font-weight:bold;   
+    color:#FFFFFF;    
+    width:45%; height:40px;  
+    }
+//input 넘버 박스 크기 조절
+    input[type="number"] {
+        width: 100%; 
+        box-sizing: border-box;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing: border-box;
+   }
+//input 텍스트 박스 크기 조절
+   input[type="text"] {
+    width: 100%; 
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+}
+
+#clock, #time{
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#random{
+    width: 90%;
+    color: black;
+}

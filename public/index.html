@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>농작물 생육지수 측정 센서</title>
+
+  <base href="/" />
+
+  <meta name="color-scheme" content="light dark" />
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+
+  <link rel="icon" type="image/png" href="https://thumb.mt.co.kr/06/2019/11/2019110814594052178_1.jpg/dims/optimize/" />
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+
+<body>
+  <app-root>
+    <table>
+      <tr>
+        <th>R685 : </th>
+        <td><input type="hidden" [(ngModel)]="R685">{{R685}}</td>
+      </tr>
+      <tr>
+        <th>R705 : </th>
+        <td><input type="hidden" [(ngModel)]="R705">{{R705}}</td>
+      </tr>
+      <tr>
+        <th>R904 : </th>
+        <td><input type="hidden" [(ngModel)]="R904">{{R904}}</td>
+      </tr>
+      <tr>  
+        <th>R980 : </th>
+        <td><input type="hidden" [(ngModel)]="R980">{{R980}}</td>
+      </tr>
+      <!--------------------------------------------------------------------------------------------------------------------------->
+      <tr>
+        <th>S685 : </th>
+        <td><input type="number" [(ngModel)]="s685_view" (ngModelChange)="printValue()"></td>
+      </tr>
+      <tr>
+        <th>S705 : </th>
+        <td><input type="number" [(ngModel)]="s705_view" (ngModelChange)="printValue()"></td>
+      </tr>
+      <tr>
+        <th>S904 : </th>
+        <td><input type="number" [(ngModel)]="s904_view" (ngModelChange)="printValue()"></td>
+      </tr>
+      <tr>
+        <th>S980 : </th>
+        <td><input type="number" [(ngModel)]="s980_view" (ngModelChange)="printValue()"></td>
+      </tr>
+    </table>
+  </app-root>
+</body>
+
+</html>
